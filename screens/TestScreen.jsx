@@ -4,10 +4,11 @@ import { db } from '../firebase'
 import { collection, doc, setDoc } from "firebase/firestore";
 import axios from 'axios'
 import { Alert } from 'react-native';
+import updateCurrentScreen from '../components/utilities/updateCurrentScreen';
 
 
 const TestScreen = () => {
-
+    updateCurrentScreen('Add Products')
     const [data, setData] = useState([])
 
     useEffect(() => {

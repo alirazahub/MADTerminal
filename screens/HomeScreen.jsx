@@ -3,8 +3,10 @@ import React, { useState, useEffect } from 'react'
 import { collection,query, getDocs,startAfter, orderBy, limit  } from "firebase/firestore";
 import { db } from '../firebase'
 import Spinner from "react-native-loading-spinner-overlay/lib";
+import updateCurrentScreen from '../components/utilities/updateCurrentScreen';
 
 const HomeScreen = ({navigation}) => {
+    updateCurrentScreen('HomeScreen')
     const [products, setProducts] = useState([]);
     const [lastVisible, setLastVisible] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
